@@ -55,8 +55,8 @@
         <p />
         <div class="build">
           <p class='large-font'>Ruby is a programming language.</p>
-          <p class='large-font'>Wait ... what's a programming language?</p>
-          <p class='large-font'>Let's backtrack a bit.</p>
+          <p class='large-font'>But... what's a programming language?</p>
+          <p class='large-font'>Really.</p>
         </div>
       </article>
       
@@ -99,6 +99,10 @@
           2. Your computer is not very smart.
         </h3>
         <p class='large-font'>Your computer can only do what you tell it to if you give it exact instructions.</p>
+        <dl>
+          <dt>Algorithm</dt>
+          <dd>A set of step-by-step instructions for performing calculations.</dd>
+        </dl>
       </article>
       
       <article id='stupid-computer'>
@@ -119,7 +123,7 @@
       </article>
       
       <article>
-        <h3>People understand GENERAL instructions.</h3>
+        <h3>We understand GENERAL instructions.</h3>
         <p>
           We left out some parts of the process, but a person could figure out:
         </p>
@@ -127,16 +131,7 @@
         <p>To use a butter knife to spread the peanut butter</p>
         <p>To put the bread in a toaster in order to toast it</p>
         <p>etc, etc, etc (there are many little steps)</p>
-      </article>
-      
-      <article id='computers-exact'>
-        <style>
-          #computers-exact p { margin: 150px 0px; };
-        </style>
-        <h3>Computers understand EXACT instructions.</h3>
-        <p class='large-font'>
-          This same recipe for a computer would be much, much longer.
-        </p>
+        <p>But how and why do we know these little details?</p>
       </article>
       
       <article>
@@ -164,6 +159,11 @@
         <p>etc, etc, etc</p>
       </article>
 
+      <article>
+        <h3>Everything is just a matter of context.</h3>
+        <p>Our language understanding and knowledge of our environment give us context to understand these instructions with minimal clarification.</p>
+      </article>
+
       <article id='programming-languages'>
         <style>
           #programming-languages p { margin-top: 80px; }
@@ -172,10 +172,8 @@
         </style>
         <h3>Back to programming languages.</h3>
         <p>A programming language makes it easier for you to give the computer instructions.</p>
-        <p class='mixed-font'>
-          It's made up of <b>simple elements</b>, that when <b>combined together</b>, 
-          are used to write a set of <b>instructions</b> that the computer then breaks down and interprets as its own language.
-        </p>
+        <p>Languages provide <b>context</b> about the computer's environment.</p>
+        <p>They provide facilities to allow it understand computery things like, what a <b>File</b> is.</p>
       </article>
 
       <article id='learned-programming'>
@@ -186,6 +184,7 @@
           You've just learned what programming is!
         </h3>
         <p class='large-font'>Programming is writing out <b>exact instructions</b> that your computer can follow to do things.</p>
+        <img src="assets/images/sandwich.png" class="centered">
       </article>
       
       <article id='ruby-rocks'>
@@ -202,7 +201,7 @@
         </p>
         <p>Ruby is <b>fun</b>, it's <b>easy to learn</b>, and the <b>syntax is very forgiving</b>.</p>
       </article>
-      
+
       <article>
         <p class='large-font'>This is some code in Java:</p>
         <section>
@@ -238,16 +237,7 @@ class Person
 end
           </pre>
         </section>
-      </article>
-
-      <article id='ruby-robot'>
-        <style>
-          #ruby-robot img { margin: 50px 0 0 450px; }
-        </style>
-        <h3>
-          Meet Ruby Robot
-        </h3>
-        <img src="assets/images/robot.png">
+        <img src="assets/images/ruby-is-easy.jpg" class="centered" width='100%' /> 
       </article>
 
       <article id='irb-intro'>
@@ -276,11 +266,9 @@ end
         <style>
           #ask-ruby .large-font { margin-top: 100px; }
         </style>
-        <section class='build'>
-          <pre>irb</pre>
-          <pre>ruby-1.9.2-p290 :001 > </pre>
-          <p class='large-font'>Let's ask Ruby to do something.</p>
-        </section>
+        <pre>irb</pre>
+        <pre>ruby-1.9.2-p290 :001 > </pre>
+        <p class='large-font'>Let's ask Ruby to do something.</p>
       </article>
       
       <article>
@@ -289,7 +277,7 @@ end
           <pre>=> 2</pre>
           <pre>> 462 * 86</pre>
           <pre>=> 39732</pre>
-          <p class='large-font'>Ruby can do math, and it can do it much quicker than a person can.</p>
+          <p class='large-font'>We can do math, or anything else Ruby can do and it will do it right away.</p>
         </section>
       </article>
 
@@ -297,11 +285,17 @@ end
         <style>
           #ruby-knows .large-font { margin-top: 100px; }
         </style>
+        <p>Ruby knows the difference between a number and a word.</p>
         <section class='build'>
           <pre>> 1 + 2 + 3<br>=> 6</pre>
-          <pre>> "ladies" + "learning" + "code"</pre>
-          <pre>=> "ladieslearningcode"</pre>
-          <p class='large-font'>Ruby knows the difference between a number and a word.</p>
+          <pre>> "ladies" + "learning" + "code" <br />=> "ladieslearningcode"</pre>
+          <pre>
+> 1.class
+=> Fixnum
+> "1".class
+=> String
+> 1.2.class
+=> Float</pre>
         </section>
       </article>
 
@@ -313,8 +307,8 @@ end
           Numbers and Words, Integers and Strings
         </h3>
         <p>In Ruby ...</p>
-        <p class='ruby-class'>Numbers without decimals are called <b>INTEGERS</b>. We just did some math with some integers.</p>
-        <p class='ruby-class'>Letters, words, and sentences are called <b>STRINGS</b>. We tell Ruby that we are intending to use a string by wrapping it in quotes.</p>
+        <p class='ruby-class'>Integers are any numbers without decimals and are called <b>Fixnum</b>. We just did some math with some integers.</p>
+        <p class='ruby-class'>Letters, words, and sentences are called <b>Strings</b>. We tell Ruby that we are intending to use a string by wrapping it in double or single quotes.</p>
       </article>
 
       <article id='objects-objects'>
@@ -349,10 +343,10 @@ end
           #back-ruby-robot .large-font { margin: 80px 0 50px 0; }
         </style>
         <h3>
-          Back to Ruby Robot
+          Ruby comes with lots and lots of Classes
         </h3>
-        <p>Ruby Robot has pages and pages of instructions for what to do with different classes of objects.</p>
-        <p class='large-font'>When you ask Ruby Robot what <b>1 + 2</b> is:</p>
+        <p>Ruby has pages and pages of instructions for what to do with different classes of objects.</p>
+        <p class='large-font'>When you ask Ruby what <b>1 + 2</b> is:</p>
         <p>It finds the instruction sheet for INTEGER.</p>
         <p>Scans the instruction sheet for <b>+</b>.</p>
         <p>Sees that when you ask for an INTEGER + INTEGER, you want it to add the two together.</p>
@@ -446,7 +440,9 @@ end
         <div class='build'>
           <p class='large-font'><b>next</b>, <b>odd?</b>, and <b>even?</b> are all methods that you can call on an Integer.</p>
           <p class='large-font'><b>capitalize</b>, <b>upcase</b>, and <b>reverse</b> are all methods that you can call on a String.</p>
-          <p class='large-font'>Methods are actions.</p>
+          <p>Methods are actions.</p>
+          <p>Methods are aslo....</p>
+          <p>Objects</p>
         </div>
       </article>
       
@@ -474,17 +470,17 @@ end
           #back-ruby-robot .large-font { margin: 80px 0 50px 0; }
         </style>
         <h3>
-          Back to Ruby Robot
+          Varaibles are labels for Objects
         </h3>
-        <p class='large-font'>You gave Ruby Robot the string "<b>ladieslearningcode</b>", and asked it to put a sticky note with "<b>llc</b>" on that string.</p>
-        <p class='large-font'>Now, when you ask for "llc", Ruby Robot will know where to find your string, because it has labelled it.</p>
+        <p class='large-font'>You gave Ruby the string "<b>ladieslearningcode</b>", and asked it to put a sticky note with "<b>llc</b>" on that string.</p>
+        <p class='large-font'>Now, when you ask for "llc", Ruby will know where to find your string, because it has labelled it.</p>
       </article>
       
       <article>
         <h3>
           Variables Can (And Often Do!) Vary
         </h3>
-        <p>A variable is called just that because the object it points to can change.</p>
+        <p>A variable is called just that because the object it points to can change. This is called "mutability"</p>
         <section class='build'>
           <pre>> llc = "a lady learning code"</pre><pre>=> "a lady learning code"</pre>
           <div>llc <img src='assets/images/arrow.png'> "a lady learning code"</div>
@@ -647,7 +643,7 @@ end
           #puzzle-one .large-font { margin: 100px 0px; }
         </style>
         <h3>
-          Puzzle One - Variables
+          Puzzle One - Fun with Variables
         </h3>
         <p class='large-font'>Open puzzle_1.rb in the puzzles folder, and write down the output you expect to see if you were to run this script.</p>
         <p class='large-font'>If you're not sure of something, remember that you can type <b>irb</b> again and try it out.</p>
@@ -893,16 +889,9 @@ end
         <p class='large-font'>We'll look at three different solutions.</p>
       </article>
 
-      <article id='conditional-logic'>
-        <h3>
-          First (Worst) Solution
-        </h3>
-        <p class='large-font'>Since we're only missing one case, the case where the tweet is exactly 140 characters, we can just add another if statement.</p>
-      </article>
-      
       <article>
         <h3>
-          First (Worst) Solution
+          Adding another condition
         </h3>
         <p>Add this last if statement to the bottom of your file: (see assignments/twitter_5.rb if needed)</p>
         <section>
@@ -910,16 +899,6 @@ end
         </section>
         <p class='large-font'>
           The == operator checks that the value of the objects on either side of it are equal. 
-        </p>
-      </article>
-      
-      <article id='conditional-logic'>
-        <h3>
-          Refactoring Our Code
-        </h3>
-        <p class='large-font'>
-          Programmers are always refactoring (re-structuring, re-organizing) their code to make it cleaner and more readable.
-          Right now is a great time to do that. 
         </p>
       </article>
 
@@ -933,7 +912,6 @@ end
         </section>
         <p>(see assignments/twitter_6.rb if needed)</p>
       </article>
-
       
       <article id='conditional-logic'>
         <h3>if .. elsif</h3>
@@ -943,41 +921,16 @@ end
         <p class='large-font'>In the above code, if the first statement doesn't evaluate to true, then the next one is attempted, and so on.</p>
       </article>
 
-      <article id='conditional-logic'>
-        <h3>if .. elsif</h3>
-        <section>
-          <pre>if tweet.length > 140<br>  puts "Your tweet is too long!"<br>elsif tweet.length < 140<br>  puts "Tweet your heart out!"<br>elsif tweet.length == 140<br>  puts "Tweet your heart out!"<br>end</pre>
-        </section>
-        <p class='large-font'>
-          Only one puts statement is ever executed.
-          The statements are evaluated in the order they are written, so the first one to evaluate to true is the only one executed.
-        </p>
-      </article>
-      
-      <article id='conditional-logic'>
-        <h3>if .. elsif</h3>
-        <section>
-          <pre>if tweet.length > 140<br>  puts "Your tweet is too long!"<br>elsif tweet.length < 140<br>  puts "Tweet your heart out!"<br>elsif tweet.length == 140<br>  puts "Tweet your heart out!"<br>end</pre>
-        </section>
-        <p class='large-font'>If none of the statements evaluate to true, then none of the puts statements are executed.</p>
-      </article>
-      
       <article>
         <h3>
-          Second Solution
+          DRY - Don't repeat yourself
         </h3>
         <p>Notice that the line puts "Tweet your hear out!" is unnecessarily repeated?</p>
-        <p>Let's cut it out by replacing the entire if statement with the code below:</p>
-        <section>
+        <section class='build'>
           <pre>if tweet.length > 140<br>  puts "Your tweet is too long!"<br>elsif tweet.length <= 140<br>  puts "Tweet your heart out!"<br>end</pre>
+        <p>The <b><=</b> or <b>>=</b> operators check for equality as well.</p>
+          <p>(see assignments/twitter_7.rb if needed)</p>
         </section>
-        <p>(see assignments/twitter_7.rb if needed)</p>
-      </article>
-      
-      <article id='conditional-instructions'>
-        <h3>Less than or equal to with <=, Greater than or equal to with >=</h3>
-        <p class='large-font'>The <b><=</b> operator checks for equality as well.</p>
-        <p class='large-font'>Checking for equality with greater than works exactly the same way, using the <b>>=</b> operator.</p>
       </article>
       
       <article>
@@ -993,29 +946,7 @@ end
         </section>
         <p>(see assignments/twitter_8.rb if needed)</p>        
       </article>
-      
-      <article id='conditional-logic'>
-        <h3>if .. else</h3>
-        <section>
-          <pre>if tweet.length > 140<br>  puts "Your tweet is too long!"<br>else<br>  puts "Tweet your heart out!"<br>end</pre>
-        </section>
-        <p class='large-font'>
-          Just like with if .. elsif, only one puts statement is ever executed. The difference here is that one of the
-          puts statements is <b>always</b> executed. 
-        </p>
-      </article>
-      
-      <article id='conditional-logic'>
-        <h3>if .. else</h3>
-        <section>
-          <pre>if tweet.length > 140<br>  puts "Your tweet is too long!"<br>else<br>  puts "Tweet your heart out!"<br>end</pre>
-        </section>
-        <p class='large-font'>
-          The else is there are a <b>catch-all</b>. You can think of it like a last resort. 
-          If none of the other options are true, then just execute the puts statement after the else.
-        </p>
-      </article>
-      
+
       <article>
         <h3>Hello, Operator?</h3>
         <table>
@@ -1116,6 +1047,20 @@ end</pre>
         <p class='large-font'>Again, there are several ways to do this.</p>
       </article>
       
+      <article>
+        <h3>
+          For loops
+        </h3>
+        <p>For loops are the most basic loop concept available in most programming languages</p>
+          <pre>
+for i in [0..3] do
+  puts "Hip-Hop-Hooray!"
+  sleep 1
+end
+</pre>
+        <p>But Ruby has "idioms" which are fun ways to do the same thing</p>
+      </article>
+
       <article>
         <h3>Tell me exactly how many times</h3>
         <p>Create a new program with the following code, or use run the program in assignments/loop_2.rb:</p>
@@ -1323,6 +1268,16 @@ sum = 0
 end</pre>
         </section>
       </article>
+
+      <article>
+        <h3>Skipping a step</h3>
+        <p>We can also tell ruby to skip a step with <code>next</code><p>
+        <pre>
+[1..10].each do |i|
+  next if i % 2
+  puts i
+end</pre>
+      </article>
       
       <article id='conditional-instructions'>
         <h3>Loops + Arrays = <3</h3>
@@ -1434,59 +1389,6 @@ end</pre>
         <p class='large-font'>Remember to think about which methods modify the array, and which do not.</p>
       </article>
       
-      <article id='rails'>
-        <style>
-          #rails .large-font { margin-top: 70px }
-        </style>
-        <h3>Ruby on Rails</h3>
-        <p>Ruby became popular mostly because of Rails.</p>
-        <section class='build'>
-          <p class='large-font'>Ruby on Rails is a framework.</p>
-          <p class='large-font'>GREAT.</p>
-          <p class='large-font'>What's a framework?</p>
-        </section>
-      </article>
-      
-      <article id='rails'>
-        <style>
-          #rails .house { margin: 30px 0 0 140px }
-        </style>
-        <h3>Ruby on Rails</h3>        
-        <section class='build'>
-          <p class='large-font'>Imagine you're building a house.</p>
-          <img src='assets/images/house.jpg' class="house">
-        </section>
-      </article>
-      
-      <article id='rails'>
-        <style>
-          #rails .house { margin: 30px 0 0 140px }
-        </style>
-        <h3>Ruby on Rails</h3>        
-        <p class='large-font'>Many people before you have built houses.</p>
-        <p class='large-font'>Why do the boring work?</p>
-        <p class='large-font'>Rails gives you the foundation, the plumbing, the electrical work, and the structural walls.</p>
-      </article>
-      
-      <article id='rails'>
-        <style>
-          #rails img { display: block; margin: 0 auto; }
-                 table tr td { border: none; }
-        </style>
-        <h3>Ruby on Rails</h3>
-        <p>Rails was extracted from work done on Basecamp at 37signals. (2004)</p>
-        <table>
-          <tr>
-            <td><img src='assets/images/rails-basecamp.jpg'></td>
-            <td><img src='assets/images/rails-twitter.png'></td>
-          </tr>
-          <tr>
-            <td><img src='assets/images/rails-groupon.png'></td>
-            <td><img src='assets/images/rails-shopify.jpg'></td>
-          </tr>
-        </table>
-      </article>
-      
       <article id='from-scratch'>
         <style>
           #from-scratch .large-font { margin-top: 70px }
@@ -1568,7 +1470,81 @@ end</pre>
         <p>Otherwise if the player's sum is equal to the dealer's sum, then there is a tie.</p>
         <p>In all other cases, the player loses.</p>
       </article>
+
+      <article id='rails'>
+        <style>
+          #rails .large-font { margin-top: 70px }
+        </style>
+        <h3>Ruby on Rails</h3>
+        <p>Ruby became popular mostly because of Rails.</p>
+        <section class='build'>
+          <p class='large-font'>Ruby on Rails is a framework.</p>
+          <p class='large-font'>GREAT.</p>
+          <p class='large-font'>What's a framework?</p>
+        </section>
+      </article>
       
+      <article id='rails'>
+        <style>
+          #rails .house { margin: 30px 0 0 140px }
+        </style>
+        <h3>Ruby on Rails</h3>        
+        <section class='build'>
+          <p class='large-font'>Imagine you're building a house.</p>
+          <img src='assets/images/house.jpg' class="house">
+        </section>
+      </article>
+
+      <article id='rails'>
+        <style>
+          #rails .house { margin: 30px 0 0 140px }
+        </style>
+        <h3>Ruby on Rails</h3>        
+        <p class='large-font'>Many people before you have built houses.</p>
+        <p class='large-font'>Why do the boring work?</p>
+        <p class='large-font'>Rails gives you the foundation, the plumbing, the electrical work, and the structural walls.</p>
+      </article>
+      
+      <article id='rails'>
+        <style>
+          #rails img { display: block; margin: 0 auto; }
+                 table tr td { border: none; }
+        </style>
+        <h3>Ruby on Rails</h3>
+        <p>Rails was extracted from work done on Basecamp at 37signals. (2004)</p>
+        <table>
+          <tr>
+            <td><img src='assets/images/rails-basecamp.jpg'></td>
+            <td><img src='assets/images/rails-twitter.png'></td>
+          </tr>
+          <tr>
+            <td><img src='assets/images/rails-groupon.png'></td>
+            <td><img src='assets/images/rails-shopify.jpg'></td>
+          </tr>
+        </table>
+      </article>
+
+      <article>
+        <h3>Getting started with Rails</h3>
+        <p>Start with the <a href="http://guides.rubyonrails.org/getting_started.html">Rails Tutorial</a></p>
+        <p>Get the latest Ruby:</p>
+        <p>
+          <b>OSX/Linux:</b> Use RVM <a href="https://rvm.io/rvm/install/">https://rvm.io/rvm/install/</a><br/>
+          <b>Windows:</b> Get Ruby <a href="http://rubyinstaller.org/">http://rubyinstaller.org/</a>
+        </p>
+        <p>Check out <a href="http://railscasts.com">Railscasts</a> for more</p>
+        <p>Check out <a href="http://stackoverflow.com">Stack Overflow</a> for help</p>
+      </article>
+      
+      <article id='credits-book'>
+        <style>
+          #credits-book img { margin: 30px 0px 0px 100px; }
+        </style>
+        <h3>Other Resources</h3>
+        <p><a href="http://mislav.uniqpath.com/poignant-guide/">Why's poignant guide to Ruby</a></p>
+        <p><a href="http://ruby.learncodethehardway.org/">Learn Ruby the hard way</a></p>
+      </article>
+
       <article id='credits-book'>
         <style>
           #credits-book img { margin: 30px 0px 0px 100px; }
@@ -1577,20 +1553,5 @@ end</pre>
         <p>Inspired by Chris Pine's <b>Learn to Program</b></p>
         <img src='assets/images/learn-to-program.jpg'>
       </article>
-      
-      <article id='credits-twg'>
-        <style>
-          #credits-twg .large-font { line-height: 80px; margin: 100px; text-align: center; }
-        </style>
-        <p class='large-font'>
-          Big, big thank you to <br /><a href='http://www.theworkinggroup.ca'>The Working Group</a>, 
-          to <a href='http://twitter.com/jack_neto'>Jack</a>, <a href='http://twitter.com/tadmanter'>Scott</a>, 
-          and <a href='http://twitter.com/bgilham'>Brian</a>, for helping out with this workshop, 
-          and to <a href='http://ladieslearningcode.com/'>Ladies Learning Code</a>!
-        </p>
-      </article>
-      
-    </section>
-
   </body>
 </html>

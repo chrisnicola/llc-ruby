@@ -661,7 +661,10 @@ article.smaller q::after {
   background: white;
   border-top: 15px #B1009A solid;
 }
-
+.medium-font {
+  font-size: 36px;
+  line-height: 40px;
+}
 .large-font {
   font-size: 40px; 
   line-height: 50px;
@@ -681,3 +684,6 @@ article.smaller q::after {
 .all-string { 
   color: #008A35; 
 }
+
+.left { float: left; margin: 10px }
+.right { float: right; margin: 10px }
