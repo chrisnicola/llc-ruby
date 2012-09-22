@@ -1356,7 +1356,7 @@ end</pre>
           <pre>=> [7, 13, 14, 16, 14, 48]</pre>
         </section>
       </article>
-      
+
       <article>
         <h3>
           Methods that DO modify the array
@@ -1369,7 +1369,7 @@ end</pre>
           <pre>=> [13, 14, 16, 14, 48]</pre>
         </section>
       </article>
-      
+
       <article>
         <h3>
           Methods that DO modify the array
@@ -1388,7 +1388,41 @@ end</pre>
         <p class='large-font'>What will be the output of puzzle 3?</p>
         <p class='large-font'>Remember to think about which methods modify the array, and which do not.</p>
       </article>
-      
+
+      <article>
+        <h3> Hashes </h3>
+
+        <p>Hashes are lightweight dictionary (key/value) objects useful for storing named data in</p>
+        <section class="build">
+          <pre>
+my_hash = {
+  :name => "Chris"
+  :job => "Programmer"
+  :location => "Launch Academy"
+}</pre>
+          <p><code>:name</code> is a Ruby construct called a "symbol"</p>
+          <pre>
+my_hash = {
+  name: "Chris"
+  job: "Programmer"
+  location: "Launch Academy"
+}</pre>
+        </section>
+      </article>
+
+      <article>
+        <h3> Using Hashes </h3>
+        <p> Get and set values in hashes by their keys </p>
+        <section class="build">
+          <pre>> my_hash[:name] </pre>
+          <pre>=> "Chris" </pre>
+          <pre>> my_hash[:last_name] = "Nicola" </pre>
+          <pre>=> "Nicola" </pre>
+          <pre>> my_hash[42] = "The ultimate answer" </pre>
+          <pre>> my_hash["The ultimate answer"] = 42 </pre>
+        </section>
+      </article>
+
       <article id='from-scratch'>
         <style>
           #from-scratch .large-font { margin-top: 70px }
@@ -1483,7 +1517,7 @@ end</pre>
           <p class='large-font'>What's a framework?</p>
         </section>
       </article>
-      
+
       <article id='rails'>
         <style>
           #rails .house { margin: 30px 0 0 140px }
@@ -1504,7 +1538,7 @@ end</pre>
         <p class='large-font'>Why do the boring work?</p>
         <p class='large-font'>Rails gives you the foundation, the plumbing, the electrical work, and the structural walls.</p>
       </article>
-      
+
       <article id='rails'>
         <style>
           #rails img { display: block; margin: 0 auto; }
